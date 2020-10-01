@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<conio.h>
- 
+
 void main()
 {
     int i,j,n,brust_time[10],start_time[10],end_time[10],wait_time[10],temp,tot;
     float avg;
-    clrscr();
+    //clrscr();
     printf("Enter the No. of jobs:\n\n");
     scanf("%d",&n);
     for(i=1;i<=n;i++)
@@ -13,7 +13,7 @@ void main()
         printf("\n \n Enter %d process burst time:\n",i);
         scanf("%d",&brust_time[i]);
     }
-     
+
     for(i=1;i<=n;i++)
     {
         for(j=i+1;j<=n;j++)
@@ -25,14 +25,14 @@ void main()
                 brust_time[j]=temp;
             }
         }
-         
+
         if(i==1)
         {
             start_time[1]=0;
             end_time[1]=brust_time[1];
             wait_time[1]=0;
         }
-         
+
         else
         {
             start_time[i]=end_time[i-1];
